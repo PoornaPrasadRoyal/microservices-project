@@ -16,7 +16,7 @@ FROM python:3.10-slim as base
 
 FROM base as builder
 
-RUN apt-get -qq update \
+RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         wget g++ \
     && rm -rf /var/lib/apt/lists/*
